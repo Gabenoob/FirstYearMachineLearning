@@ -1,0 +1,9 @@
+plotly
+torchkeras
+torchmetrics
+tqdm
+accelerate
+nbformat
+jupyter
+
+# https://pypi.tuna.tsinghua.edu.cn/simple
