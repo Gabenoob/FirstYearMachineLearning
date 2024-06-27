@@ -14,7 +14,7 @@
 \maketitle
 
 \begin{abstract}
-    Nowedays, sorting algorithms are widely used in various applications, such as database maintainment and data analysis. In this paper, I propose a novel approach to sort arrays using Transformer models, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. I also modify some structures of the original Transformer model to better fit the sorting task. I adapt the Transformer model to learn the sorting order of elements in an array which the experimental results show that the proposed model can finish sorting tasks with high accuracy and efficiency. This work opens up a new possibility for applying machine learning models to solve traditional algorithmic problems.
+    Nowedays, sorting algorithms are widely used in various applications, such as database maintainment and data analysis. In this paper, I propose a novel approach to sort arrays using Transformer models, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. I also modify some structures of the original Transformer model to better fit the sorting task. I adapt the Transformer model to learn the sorting order of elements in an array which the experimental results show that the proposed model can finish sorting tasks with high accuracy and efficiency. This may open up a new direction for using machine learning models to solve traditional algorithmic problems
 \end{abstract}
 
 \section{Introduction}
@@ -34,28 +34,54 @@ Here shows the architecture of the proposed model. The model consists of an enco
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{picture/transformer.png}
+    \includegraphics[width=0.5\textwidth]{picture/transformer.png}
     \caption{Transformer model architecture}
     \label{Transformer model architecture}
 \end{figure}
 
 \subsection{Encoder \& Decoder}
-The encoder and decoder are both composed of multiple layers of self-attention and feedforward neural networks. The self-attention mechanism allows the model to capture long-range dependencies in the input sequence, which is crucial for learning the sorting order of elements in the array. The feedforward neural networks provide non-linearities and help the model learn complex patterns in the input sequence.
+The encoder and decoder are both composed of multiple layers of self-attention and feedforward neural networks. The self-attention mechanism allows the model to capture long-range dependencies in the input sequence, which is crucial for learning the sorting order of elements in the array. The feedforward neural networks provide non-linearities and help the model learn complex patterns in the input sequence. In addition, the encoder and decoder are connected by a multi-head attention mechanism, which allows the model to attend to different parts of the input sequence depending on the context.
 
 \subsection{Attention}
 The self-attention mechanism computes a weighted sum of the input sequence based on the similarity between each pair of elements in the sequence. This allows the model to focus on different parts of the input sequence depending on the context, which is important for learning the sorting order of elements in the array.
 
+The attention mechanism is implemented as follows:
+\begin{equation}
+    Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
+\end{equation}
+where $Q$, $K$, and $V$ are the query, key, and value matrices, respectively, and $d_k$ is the dimension of the key matrix.
+\begin{equation}
+    Q = XW_Q+b_Q, K = XW_K+b_K, V = XW_V+b_V
+\end{equation}
+
 \subsection{Feedforward Neural Networks}
 The feedforward neural networks consist of two linear layers with a ReLU activation function in between. This provides the model with the capacity to learn complex patterns in the input sequence and helps improve the performance of the model.
+\begin{equation}
+    FFN(x) = \max(0, xW_1 + b_1)W_2 + b_2
+\end{equation}
 
 \subsection{RevNet}
 The RevNet is a novel neural network architecture that is used to model the sorting order of elements in the array. The RevNet consists of multiple layers of reversible residual blocks, each of which is composed of two sub-layers\cite{theefficienttransformer}: a reversible layer and a residual layer. The reversible layer computes the forward and backward transformations of the input sequence, while the residual layer adds the input sequence to the output of the reversible layer. This allows the model to learn the sorting order of elements in the array while preserving the original input sequence.
+Here is a simple representation of the RevNet:
+\begin{equation}
+    x_1,x_2 = chunk(x)
+\end{equation}
+\begin{equation}
+    y_1 = x_1 + F(x_2)
+\end{equation}
+\begin{equation}
+    y_2 = x_2 + G(y_1)
+\end{equation}
+\begin{equation}
+    RevNet(x) = cat(y_1, y_2)
+\end{equation}
+where $F$ and $G$ are the reversible and residual layers, respectively, and $chunk$ and $cat$ are the chunk and concatenate operations, respectively.
 
 \subsection{Embedding}
 The input array is first converted into a sequence of one-hot vectors using an embedding layer.\cite{TransfomerPrograming} Compared to traditional emmbedding layers, the one-hot embedding layer is more suitable for the sorting task as it cost less time and space and can reach the same performance as the traditional embedding layer.
 
 \subsection{Positional Encoding}
-The positional encoding is added to the input sequence to provide the model with information about the position of each element in the sequence. This allows the model to capture the order of elements in the array and helps improve the performance of the model.
+The positional encoding is added to the input sequence to provide the model with information about the position of each element in the sequence. This allows the model to capture the order of elements in the array and helps improve the performance of the model since the Transformer model can not learn about the order of the numbers in the array just from the sequences.
 % describe the positional encoding in formula
 In this paper, I use the following positional encoding formula:
 \begin{equation}
@@ -82,12 +108,13 @@ then generate a sequence of input data like
 The '<SOS>' token is used to indicate the start of the input sequence, the '<EOS>' token is used to indicate the end of the input sequence, and the '<PAD>' token is used to pad the input sequence to a fixed length. The input sequence then converted into a sequence of one-hot vectors using an embedding layer.
 
 \subsection{Attention Mask}
-
+\subsubsection*{tril mask}
 % tril matrix
-The attention mask is used to prevent the model from attending to future elements in the sequence during training. This is important for learning the sorting order of elements in the array, as the model should only attend to past elements when generating the output sequence. The attention mask is implemented as a lower triangular matrix with zeros on the diagonal and ones elsewhere.
+The tril mask is used to prevent the model learning from the future elements in the sequence during training. This is important for learning the sorting order of elements in the array, as the model should only attend to past elements when generating the output sequence. The attention mask is implemented as a lower triangular matrix with zeros on the top diagonal and ones elsewhere.
 
 % padding mask
-In addition to the attention mask, I also use a padding mask to ignore padding tokens in the input sequence. This is important for the sorting task as the model should only attend to actual elements in the sequence when making predictions. The padding mask sets the attention weights of padding tokens to zero, which ensures that the model does not attend to padding tokens and helps improve the performance of the model.
+\subsubsection*{padding mask}
+In addition to the attention mask, I also use a padding mask to ignore padding tokens in the input sequence. This is important for the sorting task as the model may learn the pad label through the training. The padding mask sets the attention weights of padding tokens to zero, which ensures that the model does not attend to padding tokens and helps improve the performance of the model.
 
 
 \section{Training}

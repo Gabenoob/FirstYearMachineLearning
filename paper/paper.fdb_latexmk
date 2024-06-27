@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1719521523.42854 "paper.xdv" "paper.pdf" "paper" 1719521524.07036 0
-  "paper.xdv" 1719521523.40485 110924 b9b496dfbace4ea901bab09dd085d166 "xelatex"
+["xdvipdfmx"] 1719523846.34355 "paper.xdv" "paper.pdf" "paper" 1719523846.84096 0
+  "paper.xdv" 1719523846.32216 118320 4235794783928333113f0177384af4c7 "xelatex"
   (generated)
   "paper.pdf"
   (rewritten before read)
-["xelatex"] 1719521522.67031 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719521524.06981 0
-  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719521522.42898 12860 9d3ce28e69c5a8f16497ed317300d4e9 ""
+["xelatex"] 1719523845.72154 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719523846.8405 0
+  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719523845.46375 14014 c137c1078e4dbbeadfa03719933603a1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -43,8 +43,8 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1719483060 10850172 6bc1e1301e3af5e7f30d65578a91fb10 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "paper.aux" 1719521523.40416 2894 38881b77c19840152f3c85df5077c3f6 "xelatex"
-  "paper.tex" 1719521522.42898 12860 9d3ce28e69c5a8f16497ed317300d4e9 ""
+  "paper.aux" 1719523846.32153 2894 e4c975f5a873fb0b4ac7de1880bcc593 "xelatex"
+  "paper.tex" 1719523845.46375 14014 c137c1078e4dbbeadfa03719933603a1 ""
   "picture/optimizer.png" 1719513803.40391 50525 d6f21af38d601162904dec9a89bfbf63 ""
   "picture/training_base.png" 1719513111.75859 25829 48105e80bc35db2a8f2dfa9c5e7dd668 ""
   "picture/training_onehot.png" 1719515690.93444 25544 c003df8b9c80d84fba831a65e8cf998e ""
