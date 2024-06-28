@@ -175,6 +175,25 @@ class resconnect_and_layernorm(nn.Module):
         # res first and then norm
         return self.norm(x + self.dropout(sublayer_output))
 
+class RevNet(nn.Module):
+    def __init__(self,F,G, input_dim):
+        super(RevNet, self).__init__()
+        self.F = F
+        self.G = G
+        self.input_dim = input_dim//2
+
+    def forward(self, x):
+        x1, x2 = x.chunk(2, dim=1)
+        y1 = x1 + self.F(x2)
+        y2 = x2 + self.G(y1)
+        return torch.cat([y1, y2], dim=1)
+
+    def inverse(self, x):
+        x1, x2 = x.chunk(2, dim=1)
+        y2 = x2 - self.G(x1)
+        y1 = x1 - self.F(y2)
+        return torch.cat([y1, y2], dim=1)
+
 class Embedding(nn.Module):
     def __init__(self, input_dim,vocab_size):
         super(Embedding, self).__init__()

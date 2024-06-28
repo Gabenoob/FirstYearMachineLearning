@@ -1,17 +1,23 @@
 \documentclass{article}
 \usepackage{xeCJK}
 \setCJKmainfont{SimSong}
-\usepackage{graphicx} % Add this line to import the graphicx package
+\usepackage{graphicx}
+\usepackage{tikz}
 
 
-\author{Weizhao Wang}
-\date{\today}
+% \author{Weizhao Wang}
+% \date{\today}
 
 \begin{document}
 
-\title{A Sorting Algorithm Based on Transformer Models}
 
-\maketitle
+\begin{tikzpicture}
+    [remember picture, overlay]
+    \node[anchor=north,yshift=-10mm] at (current page.north) {\includegraphics[width=1.4\textwidth]{picture/head.png}};
+\end{tikzpicture}
+
+\vspace{45mm}
+
 
 \begin{abstract}
     Nowedays, sorting algorithms are widely used in various applications, such as database maintainment and data analysis. In this paper, I propose a novel approach to sort arrays using Transformer models, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. I also modify some structures of the original Transformer model to better fit the sorting task. I adapt the Transformer model to learn the sorting order of elements in an array which the experimental results show that the proposed model can finish sorting tasks with high accuracy and efficiency. This may open up a new direction for using machine learning models to solve traditional algorithmic problems
@@ -54,6 +60,9 @@ where $Q$, $K$, and $V$ are the query, key, and value matrices, respectively, an
     Q = XW_Q+b_Q, K = XW_K+b_K, V = XW_V+b_V
 \end{equation}
 
+\subsubsection*{Multihead}
+In this paper, I use 8 heads to build the multihead Attention network, this can enhance the performance of the model wihtout decreasing its accuracy.
+
 \subsection{Feedforward Neural Networks}
 The feedforward neural networks consist of two linear layers with a ReLU activation function in between. This provides the model with the capacity to learn complex patterns in the input sequence and helps improve the performance of the model.
 \begin{equation}
@@ -75,7 +84,31 @@ Here is a simple representation of the RevNet:
 \begin{equation}
     RevNet(x) = cat(y_1, y_2)
 \end{equation}
-where $F$ and $G$ are the reversible and residual layers, respectively, and $chunk$ and $cat$ are the chunk and concatenate operations, respectively.
+where $F$ and $G$ are the reversible and residual layers,such as Attention, respectively, and $chunk$ and $cat$ are the chunk and concatenate operations, respectively.
+and its inverse format is
+\begin{equation}
+    y_1,y_2 = chunk(y)
+\end{equation}
+\begin{equation}
+    x_2 = y_2 - G(y_1)
+\end{equation}
+\begin{equation}
+    x_1 = y_1 - F(x_2)
+\end{equation}
+\begin{equation}
+    InvRevNet(y) = cat(x_1,x_2)
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]
+    {picture/RevNet.png}
+
+
+    {left: forward  right: inverse}
+    \caption{RevNet Structure}
+    \label{RevNet Structure}
+\end{figure}
 
 \subsection{Embedding}
 The input array is first converted into a sequence of one-hot vectors using an embedding layer.\cite{TransfomerPrograming} Compared to traditional emmbedding layers, the one-hot embedding layer is more suitable for the sorting task as it cost less time and space and can reach the same performance as the traditional embedding layer.
