@@ -3,7 +3,16 @@
 \setCJKmainfont{SimSong}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
+
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+% Define the custom footer
+\fancyfoot[C]{第\thepage 页，共\pageref{LastPage}页}
+\renewcommand{\footrulewidth}{0pt} % Optional: Removes the footer rule, if there was one
 
 % \author{Weizhao Wang}
 % \date{\today}

@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1719561275.26342 "paper.xdv" "paper.pdf" "paper" 1719561275.836 0
-  "paper.xdv" 1719561275.23006 123712 e7ba805a5972c2c3face269eae09a172 "xelatex"
+["xdvipdfmx"] 1719561819.5126 "paper.xdv" "paper.pdf" "paper" 1719561820.16705 0
+  "paper.xdv" 1719561819.47738 124968 5f70edce06d6c5f526be8dfbb756e6db "xelatex"
   (generated)
   "paper.pdf"
   (rewritten before read)
-["xelatex"] 1719561274.63274 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719561275.83498 0
-  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719561273.74889 14788 bfac23e83eeda07adddfc8a25d6e27cf ""
+["xelatex"] 1719561818.78612 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719561820.16599 0
+  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719561817.84728 15122 3e8b0de11775144276de1ab529aa0921 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -67,6 +67,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd" 1705352648 2430 fce77d7e103eb98b6c4d486ae1d466c0 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty" 1634853225 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/ctex/ctexhook.sty" 1657829894 6505 33157acfddefdd8fd513e2308e07a435 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1668028059 18450 88279bf67c81e69f8e3f1c1bad1a26c5 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty" 1707868014 163194 e97577b0d79d363e11289d4e27baa8a4 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg" 1532898934 549 c4adac819276241fea8eb79c5ab7b99e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty" 1707868014 3484 ff877041166391bc5ca8a1e45614784e ""
@@ -83,6 +84,9 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1708376303 9327 11bedad2ac38f92e405a38ed18489a03 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate-2023-10-10.sty" 1707946138 49753 715423f8c411773dc3698602d0fb87ba ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty" 1707946138 1180 6fa680297853e95f173b451108f02041 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty" 1697402539 2868 94ccb360e6e4443cad221f78a5cbb6a8 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty" 1697402539 2720 a038de4136aa4a721c8ef0dc226ae6b5 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.sty" 1697402539 9166 74f0d39535736e850fd2f2796fd37674 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1601326656 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1673816307 373 00b204b1d7d095b892ad31a7494b0373 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1601326656 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -100,8 +104,8 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1719483060 10850172 6bc1e1301e3af5e7f30d65578a91fb10 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "paper.aux" 1719561275.22929 3098 819acdf8b01430624f255e6d48193d26 "xelatex"
-  "paper.tex" 1719561273.74889 14788 bfac23e83eeda07adddfc8a25d6e27cf ""
+  "paper.aux" 1719561819.47675 3187 84215233499b7398abde908d84435009 "xelatex"
+  "paper.tex" 1719561817.84728 15122 3e8b0de11775144276de1ab529aa0921 ""
   "picture/RevNet.png" 1719554884.97851 59220 b409c932937e0a9d28e167cabaee38aa ""
   "picture/head.png" 1719560268.50948 62860 d70e9e254ea70903fba27a8901992a59 ""
   "picture/optimizer.png" 1719513803.40391 50525 d6f21af38d601162904dec9a89bfbf63 ""

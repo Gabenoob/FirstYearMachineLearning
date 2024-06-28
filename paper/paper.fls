@@ -158,6 +158,14 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.sty
 INPUT ./paper.aux
 INPUT ./paper.aux
 INPUT paper.aux
