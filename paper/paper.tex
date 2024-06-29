@@ -29,11 +29,11 @@
 
 
 \begin{abstract}
-    Nowedays, sorting algorithms are widely used in various applications, such as database maintainment and data analysis. In this paper, I propose a novel approach to sort arrays using Transformer models, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. I also modify some structures of the original Transformer model to better fit the sorting task. I adapt the Transformer model to learn the sorting order of elements in an array which the experimental results show that the proposed model can finish sorting tasks with high accuracy and efficiency. This may open up a new direction for using machine learning models to solve traditional algorithmic problems
+    Abstract Sorting algorithms are widely used in various applications, such as database maintenance and data analysis. In this paper, I built up a Transformer model to sort arrays, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. I also modified some structures based on the original Transformer model to better fit the sorting task. I set up an experiment to make the model learn its parameters, and the final model could finish sorting tasks with high accuracy and eﬀiciency.  This experiment shows a new method of solving traditional algorithm problems using machine learning.
 \end{abstract}
 
 \section{Introduction}
-Sorting is a fundamental problem in computer science and has been studied for decades. Traditional sorting algorithms, such as quicksort, mergesort, and heapsort, have been widely used in various applications. These algorithms have been well studied and are known to have good performance in practice. However, with the advent of deep learning and neural networks, there has been growing interest in exploring the use of machine learning models to solve traditional algorithmic problems. There have been several recent works that have shown promising results in using machine learning models to solve sorting problems \cite{SortNet}. Mankowitz, D.J. and others \cite{FasterSorting} have discovered a faster sorting algorithm using deep reinforcement learning. These works have demonstrated the potential of applying machine learning models to solve traditional algorithmic problems.
+Sorting is a fundamental problem in computer science and has been studied for many years. People have found out that different sorting methods, like quick, heap, and hash, have been used in many applications. These algorithms have been well studied and are known to perform well in practice. However, with the development of neural networks, especially transformers, more and more problems can be solved through training a network and array sorting. There have been several recent works that have shown promising results in using machine learning models to solve sorting problems \cite{SortNet}. Mankowitz, D.J. and others \cite{FasterSorting} have discovered a faster sorting algorithm using deep reinforcement learning. These works have demonstrated the potential of applying machine learning models to solve traditional algorithmic problems.
 
 In this paper, I propose a novel approach to sorting arrays using Transformer models, a type of neural network architecture that has shown remarkable performance in natural language processing tasks. The Transformer model, introduced by Vaswani et al. \cite{vaswani2017attention}, is based on self-attention mechanisms and has been shown to outperform traditional recurrent neural networks in many natural language processing tasks. I adapt the Transformer model to learn the sorting order of elements in an array and use it to sort arrays efficiently.
 
@@ -45,7 +45,7 @@ The main contributions of this paper are as follows:
 
 
 \section{Model Architecture}
-Here shows the architecture of the proposed model. The model consists of an encoder and a decoder, each of which is composed of multiple layers of self-attention and feedforward neural networks. The encoder takes the input array and encodes it into a sequence of hidden states, which are then passed to the decoder. The decoder generates the output sequence of sorted elements based on the hidden states from the encoder. As shown in Figure \ref{Transformer model architecture}.
+Here shows the architecture of the proposed model. The model is mostly similar to the normal Transformer Model. It has an encoder and decoder, the encoder transform the input to a hidden state and the decoder transform the hidden state to the output. The most different between the original Transfomer and my model is the residual block. I replace it with a RevNetBlock, a new resconnect proposed in \cite{RevNet}. Besides, I used onehot vector replace the nn.Embedding layer. As shown in Figure \ref{Transformer model architecture}.
 
 \begin{figure}
     \centering
@@ -226,6 +226,8 @@ In this paper, I have introduced a new method for sorting arrays using Transform
     Rigutini L, Papini T, Maggini M, et al. SortNet: Learning to rank by a neural preference function[J]. IEEE transactions on neural networks, 2011, 22(9): 1368-1380.
     \bibitem{theefficienttransformer}
     Kitaev N, Kaiser Ł, Levskaya A. Reformer: The efficient transformer[J]. arXiv preprint arXiv:2001.04451, 2020.
+    \bibitem{RevNet}
+    Gomez, A. N., Ren, M., Urtasun, R., Grosse, R. B. (2017). The reversible residual network: Backpropagation without storing activations. Advances in Neural Information Processing Systems, 2017-December, 2215-2225.
     \bibitem{FasterSorting}
     Mankowitz, D.J., Michi, A., Zhernov, A. et al. Faster sorting algorithms discovered using deep reinforcement learning. Nature 618, 257-263 (2023).
     \bibitem{Opt}

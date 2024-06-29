@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1719561819.5126 "paper.xdv" "paper.pdf" "paper" 1719561820.16705 0
-  "paper.xdv" 1719561819.47738 124968 5f70edce06d6c5f526be8dfbb756e6db "xelatex"
+["xdvipdfmx"] 1719628225.81447 "paper.xdv" "paper.pdf" "paper" 1719628226.40092 0
+  "paper.xdv" 1719628225.77891 126412 79dc5c392350bc1f63dc2f96a363d81b "xelatex"
   (generated)
   "paper.pdf"
   (rewritten before read)
-["xelatex"] 1719561818.78612 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719561820.16599 0
-  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719561817.84728 15122 3e8b0de11775144276de1ab529aa0921 ""
+["xelatex"] 1719628225.07434 "/Users/gabe/Desktop/final_paper/paper/paper.tex" "paper.xdv" "paper" 1719628226.39993 0
+  "/Users/gabe/Desktop/final_paper/paper/paper.tex" 1719628224.83316 15300 4b36f4fc11c7a34b6a47a027ef3b18c3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -104,8 +104,8 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1719483060 10850172 6bc1e1301e3af5e7f30d65578a91fb10 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "paper.aux" 1719561819.47675 3187 84215233499b7398abde908d84435009 "xelatex"
-  "paper.tex" 1719561817.84728 15122 3e8b0de11775144276de1ab529aa0921 ""
+  "paper.aux" 1719628225.77829 3225 00b8387b43765cfe6bd4e80b56101d6b "xelatex"
+  "paper.tex" 1719628224.83316 15300 4b36f4fc11c7a34b6a47a027ef3b18c3 ""
   "picture/RevNet.png" 1719554884.97851 59220 b409c932937e0a9d28e167cabaee38aa ""
   "picture/head.png" 1719560268.50948 62860 d70e9e254ea70903fba27a8901992a59 ""
   "picture/optimizer.png" 1719513803.40391 50525 d6f21af38d601162904dec9a89bfbf63 ""
